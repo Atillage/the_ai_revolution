@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Understanding AI — clear answers about AI, work, education, and the future.">
+<title>Understanding AI | The AI Revolution</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="lab.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html" aria-label="The AI Revolution home"><span class="brand-mark" aria-hidden="true"><i></i><b></b></span><span><strong>The AI Revolution</strong><small>Adapt · Build · Evolve</small></span></a><button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-controls="main-nav" aria-expanded="false">☰</button><nav class="nav" id="main-nav" aria-label="Main navigation"><a class="nav-link" href="index.html">Home</a><a class="nav-link " href="home.html">AI My Home</a><a class="nav-link " href="office.html">AI My Office</a><a class="nav-link " href="guides.html">Guides</a><a class="nav-link active" href="understanding-ai.html" aria-current="page">Understanding AI</a><a class="nav-link " href="about.html">About</a></nav></div></header>
+
+<main id="main" class="container">
+  <div class="page-head">
+    <span class="eyebrow">The bigger picture</span>
+    <h1>Understanding <span class="gradient">AI</span></h1>
+    <p class="lead">Clear answers about AI—and what it means for your work, education, and future.</p>
+    <div class="actions">
+      <a class="btn primary" href="#start">Start the beginner series ↗</a>
+      <a class="btn secondary" href="#library">Browse everything</a>
+    </div>
+    <div class="counts" id="counts"></div>
+  </div>
+
+  <section class="section" id="start">
+    <div class="section-head">
+      <div><span class="eyebrow">Start here</span><h2>A Beginner's Guide to AI.</h2><p>Five short parts. Read them in order.</p></div>
+    </div>
+    <div class="series" id="series"></div>
+  </section>
+
+  <section class="section" id="guides">
+    <div class="section-head">
+      <div><span class="eyebrow">Paid guides</span><h2>Playbooks you can use today.</h2></div>
+      <a href="https://altillage.gumroad.com" target="_blank" rel="noopener">See all on Gumroad ↗</a>
+    </div>
+    <div class="guides" id="guideList"></div>
+  </section>
+
+  <section class="section" id="library">
+    <div class="section-head">
+      <div><span class="eyebrow">The library</span><h2>Explore articles & answers.</h2></div>
+    </div>
+    <p>Website articles and Substack stories together. Substack stories appear newest first.</p>
+    <div class="controls">
+      <input class="search" id="search" type="search" placeholder="Search articles…" aria-label="Search articles">
+      <div class="chips" id="chips"></div>
+    </div>
+    <p id="resultCount" role="status" aria-live="polite"></p><div class="library" id="grid"></div>
+    <p class="empty" id="empty">Nothing matches that yet — try another word.</p>
+  </section>
+
+  <section class="section">
+    <div class="feature">
+      <span class="eyebrow">Stay in the loop</span>
+      <h2>New guides, straight to your inbox.</h2>
+      <p class="lead">Join AI Revolution Update on Substack — free, practical, and jargon-free.</p>
+      <div class="actions"><a class="btn primary" href="https://airevolutionupdate.substack.com/subscribe" target="_blank" rel="noopener">Subscribe free ↗</a></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container footer-grid"><div><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><b></b></span><span><strong>The AI Revolution</strong><small>Adapt · Build · Evolve</small></span></a><p>Practical ideas and clear guidance for bringing useful technology into everyday life.</p></div><div class="foot-links"><a href="understanding-ai.html">Understanding AI</a><a href="home.html">AI My Home</a><a href="office.html">AI My Office</a><a href="guides.html">Guides</a><a href="about.html">About</a><a href="disclosure.html">Disclosure & privacy</a></div></div><div class="container fineprint">© <span id="year">2026</span> The AI Revolution. Educational information; confirm compatibility, costs, and features before purchasing.</div></footer>
+
+<noscript><p class="container">Enable JavaScript for search and filters, or <a href="https://airevolutionupdate.substack.com">read all articles on Substack</a>.</p></noscript>
+<script>
+/* =========================================================
+   EDIT YOUR CONTENT HERE — the only part you need to touch.
+   New Substack post? Copy one line in ARTICLES and change it.
+   access: "free" or "paid"   category: one of CATEGORIES
+   image: optional Substack cover image URL, or ""
+   ========================================================= */
+const CATEGORIES = ["How-To", "Beginner's Guide", "Jobs & Careers", "AI Tools", "AI News"];
+
+const SUB = "https://airevolutionupdate.substack.com/p/";
+const SERIES_IMG = "https://substackcdn.com/image/fetch/$s_!Sl_R!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F258b4d98-6721-440e-9428-8874c67f4fc9_1024x1024.png";
+
+const ARTICLES = [
+  { title:"Put AI to Work While You Sleep", desc:"The one AI skill that saves hours every week — and how to set it up yourself.", url:SUB+"put-ai-to-work-while-you-sleep", date:"2026-10-09", category:"How-To", access:"free", image:"" },
+  { title:"What Is Claude Code — and Should You Care?", desc:"A plain-English look at Claude Code and whether it matters for non-programmers.", url:SUB+"what-is-claude-code-and-should-you", date:"2026-09-08", category:"AI Tools", access:"free", image:"" },
+  { title:"You Saw a \"More Models\" Button in Claude — Here's What It Means", desc:"What Claude's model picker does and which option to choose.", url:SUB+"you-saw-a-more-models-button-in-claudeheres", date:"2026-08-08", category:"AI Tools", access:"free", image:"" },
+  { title:"The Pope, the Paycheck, and the Personal AI Agent", desc:"A week of AI news — including Google's biggest AI event of the year.", url:SUB+"the-pope-the-paycheck-and-the-personal", date:"2026-06-01", category:"AI News", access:"free", image:"" },
+  { title:"Google and AI Are Sprinting. Do You Know What They're Racing Toward?", desc:"What the fast pace of AI announcements means for everyday people.", url:SUB+"google-and-ai-are-sprinting-do-you", date:"2026-05-18", category:"AI News", access:"free", image:"" },
+  { title:"Turn a Photo Into a Caricature, Cartoon, or Professional Avatar", desc:"Step-by-step: use AI to transform your own photos.", url:SUB+"how-to-turn-a-photo-into-a-caricature", date:"2026-03-05", category:"How-To", access:"free", image:"https://substackcdn.com/image/fetch/$s_!m9Cr!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F60d19c5e-9ead-4a1a-a280-adf46fa3d85b_750x770.jpeg" },
+  { title:"Can Humans Survive the AI and Robot Takeover?", desc:"A look at the numbers behind the automation headlines.", url:SUB+"can-humans-survive-the-ai-and-robot", date:"2026-02-23", category:"Jobs & Careers", access:"free", image:"" },
+  { title:"The Jobs AI Is Changing Right Now", desc:"Which jobs are shifting, and what that actually means for you.", url:SUB+"the-jobs-ai-is-changing-right-now", date:"2026-02-15", category:"Jobs & Careers", access:"free", image:"" },
+  { title:"How AI Screens Resumes — and How to Prepare", desc:"Get your resume past AI screening software.", url:SUB+"how-ai-screens-resumes-and-how-to", date:"2026-02-08", category:"Jobs & Careers", access:"free", image:"" },
+  { title:"Who Are the Big AI Players (and Which One Should You Use?)", desc:"ChatGPT, Claude, Gemini and more — sorted out in plain language.", url:SUB+"who-are-the-big-ai-players-and-which", date:"2026-01-31", category:"AI Tools", access:"free", image:"" },
+  { title:"When to Use AI (and When Google Is Enough)", desc:"A simple way to decide which tool fits the question.", url:SUB+"when-to-use-ai-and-when-google-is", date:"2026-01-22", category:"How-To", access:"free", image:"" },
+  { title:"Part 5 — How to Start Using AI Safely and Intentionally", desc:"Beginner's Guide to AI, part 5 of 5.", url:SUB+"part-5-how-to-start-using-ai-safely", date:"2026-01-17", category:"Beginner's Guide", access:"free", image:SERIES_IMG, part:5 },
+  { title:"Part 4 — What Are AI Agents (and What Are They Doing?)", desc:"Beginner's Guide to AI, part 4 of 5.", url:SUB+"part-4-what-are-ai-agents-and-what", date:"2026-01-10", category:"Beginner's Guide", access:"free", image:SERIES_IMG, part:4 },
+  { title:"Part 3 — How AI Is Reshaping the Way We Work", desc:"Beginner's Guide to AI, part 3 of 5.", url:SUB+"part-3-how-ai-is-reshaping-the-way", date:"2025-12-29", category:"Beginner's Guide", access:"free", image:SERIES_IMG, part:3 },
+  { title:"Part 2 — What AI Can (and Can't) Do at Work", desc:"Beginner's Guide to AI, part 2 of 5.", url:SUB+"what-ai-can-and-cant-do-at-work-beginners", date:"2025-12-17", category:"Beginner's Guide", access:"free", image:SERIES_IMG, part:2 },
+  { title:"Part 1 — What Is AI, Really?", desc:"Beginner's Guide to AI, part 1 of 5 — why it suddenly feels everywhere.", url:SUB+"what-is-ai-really-and-why-it-suddenly", date:"2025-12-14", category:"Beginner's Guide", access:"free", image:SERIES_IMG, part:1 },
+  { title:"Welcome to the AI Revolution", desc:"A practical guide for everyday people — where this newsletter starts.", url:SUB+"welcome-to-the-ai-revolution-a-practical", date:"2025-11-30", category:"AI News", access:"free", image:"https://substackcdn.com/image/fetch/$s_!1ruY!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F38253f31-7fbd-4fd4-ae9c-5f04657d3cea_1024x1024.png" }
+];
+
+/* Paid products (Gumroad). Add/remove lines the same way. */
+const GUIDES = [
+  { title:"AI Assistant Playbook: For Working People", desc:"Set up an AI assistant that handles recurring tasks for you.", price:"$19", url:"https://altillage.gumroad.com/l/ai-playbook-workers" },
+  { title:"Your AI Assistant Playbook: For Small Business Owners", desc:"Put recurring AI tasks to work across your business.", price:"$27", url:"https://altillage.gumroad.com/l/ai-playbook-business" },
+  { title:"Your AI Scholarship Assistant: College and Medical School", desc:"Use AI to find and track scholarships and funding.", price:"$19", url:"https://altillage.gumroad.com/l/scholarship-assistant" },
+  { title:"Customer Service Rep's AI Survival Checklist", desc:"A quick checklist for staying ahead of AI in customer service.", price:"$7", url:"https://altillage.gumroad.com/l/mslfc" }
+];
+/* ================= end of editable content ================= */
+
+const WEBSITE_ARTICLES = [{"title": "AI is here. What does that mean for us?", "desc": "AI is no longer an idea from science fiction. It is appearing in everyday products and at work. The useful question is not whether we should panic, but where it can help—and when we should be cautious.", "url": "blog/ai-is-here.html", "date": "", "category": "AI Questions", "access": "free", "image": "", "local": true}, {"title": "Is AI replacing jobs?", "desc": "AI is changing how some tasks get done. It is less helpful to focus on sweeping predictions than to ask which tasks are changing, which skills remain valuable and where new opportunities appear.", "url": "blog/ai-jobs.html", "date": "", "category": "Jobs & Careers", "access": "free", "image": "", "local": true}, {"title": "AI: fact versus fear", "desc": "Every major technological change brings excitement and concern. Artificial intelligence deserves thoughtful questions, not blind trust or constant fear.", "url": "blog/fact-vs-fear.html", "date": "", "category": "AI Questions", "access": "free", "image": "", "local": true}, {"title": "What human skills matter in an AI world?", "desc": "The future of work is not only about learning the newest software. It is also about understanding how to combine useful tools with distinctly human strengths.", "url": "blog/human-skills.html", "date": "", "category": "Jobs & Careers", "access": "free", "image": "", "local": true}];
+const ALL_ARTICLES = [...ARTICLES,...WEBSITE_ARTICLES];
+const ALL_CATEGORIES = [...CATEGORIES,"AI Questions"];
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt = d => new Date(d+"T12:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"});
+
+$("counts").innerHTML = `<div><b>${ALL_ARTICLES.length}</b>Articles</div><div><b>${GUIDES.length}</b>Paid guides</div><div><b>${ALL_CATEGORIES.length}</b>Topics</div>`;
+
+$("series").innerHTML = ARTICLES.filter(a=>a.part).sort((a,b)=>a.part-b.part).map(a=>`
+  <a class="feature-card step" href="${a.url}" target="_blank" rel="noopener">
+    <span class="number">0${a.part} / PART</span>
+    <h3>${esc(a.title.replace(/^Part \d+ — /,""))}</h3>
+  </a>`).join("");
+
+$("guideList").innerHTML = GUIDES.map(g=>`
+  <article class="product-card guide">
+    <span class="eyebrow">Paid guide</span>
+    <h3>${esc(g.title)}</h3><p>${esc(g.desc)}</p>
+    <div class="row"><span class="price">${g.price}</span>
+      <a class="btn primary" href="${g.url}" target="_blank" rel="noopener">Get it ↗</a></div>
+  </article>`).join("");
+
+let activeCat = "All";
+$("chips").innerHTML = ["All",...ALL_CATEGORIES].map(c=>`<button class="chip${c==="All"?" active":""}" type="button" aria-pressed="${c==="All"}" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
+$("chips").addEventListener("click", e=>{
+  const b = e.target.closest(".chip"); if(!b) return;
+  activeCat = b.dataset.cat;
+  document.querySelectorAll(".chip").forEach(x=>{x.classList.toggle("active", x===b);x.setAttribute("aria-pressed",String(x===b));});
+  render();
+});
+$("search").addEventListener("input", render);
+
+function render(){
+  const q = $("search").value.trim().toLowerCase();
+  const list = ALL_ARTICLES
+    .filter(a => activeCat==="All" || a.category===activeCat)
+    .filter(a => !q || (a.title+" "+a.desc).toLowerCase().includes(q))
+    .sort((a,b)=> b.date.localeCompare(a.date));
+  $("resultCount").textContent = `${list.length} of ${ALL_ARTICLES.length} articles`;
+  $("grid").innerHTML = list.map(a=>`
+    <a class="feature-card post" href="${a.url}" ${a.local ? "" : 'target="_blank" rel="noopener"'}>
+      <div class="thumb" ${a.image?`style="background-image:url('${a.image}')"`:""}>${a.image?"":"AI REVOLUTION"}</div>
+      <div class="body">
+        <div class="meta"><span>${esc(a.category)}${a.date ? " · "+fmt(a.date) : " · Website article"}</span>${a.access==="paid"?'<span class="tag-paid">Paid</span>':""}</div>
+        <h3>${esc(a.title)}</h3><p>${esc(a.desc)}</p>
+        <span class="go">${a.local ? "Read here →" : "Read on Substack ↗"}</span>
+      </div>
+    </a>`).join("");
+  $("empty").style.display = list.length ? "none" : "block";
+}
+render();
+</script>
+</body>
+</html>
