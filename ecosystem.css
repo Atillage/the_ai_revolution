@@ -658,3 +658,4 @@
 .jobs-cta a{color:var(--green)}
 .qs-row{gap:8px}
 .qs-row a{padding:9px 15px;font-size:.88rem}
+.ho-grid a[data-pick="nowifi"] img{transform:none;object-position:62% 60%}
