@@ -14,7 +14,7 @@ document.addEventListener('click',e=>{document.querySelectorAll('.nav-drop.open'
     const box=document.createElement('div');box.className='keep-box';
     box.innerHTML='<p class="keep-title">Keep your results</p>'+
       '<div class="keep-actions"><button type="button" class="btn secondary keep-copy">Copy my results</button></div>'+
-      '<form class="keep-join" action="'+SUB+'" method="get" target="_blank" rel="noopener"><label for="kj-'+label+'">Sign up for my newsletter on how AI is changing work, money and health care, and what you can do about it.</label><div class="keep-row"><input id="kj-'+label+'" type="email" name="email" placeholder="you@email.com" required><button class="btn primary" type="submit">Sign up free →</button></div><small>You’ll finish signing up on Substack. Unsubscribe anytime.</small></form>';
+      '<div class="keep-join"><p>Get my free newsletter on how AI is changing work, money and health care, and what you can do about it.</p><a class="btn primary" href="'+SUB+'" target="_blank" rel="noopener">Get my free newsletter →</a><small>Opens Substack, where the newsletter lives. Unsubscribe anytime.</small></div>';
     const cb=box.querySelector('.keep-copy');
     cb.addEventListener('click',()=>{
       const t=getText(); const done=()=>{cb.textContent='Copied ✓';setTimeout(()=>{cb.textContent='Copy my results';},2000);};

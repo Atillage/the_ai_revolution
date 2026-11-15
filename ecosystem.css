@@ -659,3 +659,8 @@
 .qs-row{gap:8px}
 .qs-row a{padding:9px 15px;font-size:.88rem}
 .ho-grid a[data-pick="nowifi"] img{transform:none;object-position:62% 60%}
+/* Newsletter: Substack's own signup form, embedded */
+.join-embed{max-width:520px;margin:6px auto 10px;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 6px 24px #172d2814}
+.join-embed iframe{display:block;width:100%;height:320px;border:0;background:#fff}
+.keep-join p{margin:0 0 10px}
+.keep-join small{display:block;margin-top:8px}

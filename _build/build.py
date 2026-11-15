@@ -62,7 +62,7 @@ def join(topic=None, fid="join-email"):
     extra = "" if topic is None else f" New {topic} guides will be added to this page as they're published."
     text = ("AI Revolution Update is my free newsletter about AI and everyday life: work, home, money, learning and health care. "
             "It covers AI broadly, not only this topic." + extra)
-    return f'''<section class="join" id="join"><h2>{heading}</h2><p>{text}</p><form class="join-form" action="{SUBSCRIBE}" method="get" target="_blank" rel="noopener"><label class="sr-only" for="{fid}">Email address</label><input id="{fid}" type="email" name="email" placeholder="you@email.com" required><button class="btn primary" type="submit">Sign up free →</button></form><small>You'll finish signing up on Substack, where the newsletter lives. Unsubscribe anytime.</small></section>'''
+    return f'''<section class="join" id="join"><h2>{heading}</h2><p>{text}</p><div class="join-embed"><iframe src="https://airevolutionupdate.substack.com/embed" title="Sign up for the AI Revolution Update newsletter" loading="lazy" scrolling="no"></iframe></div><small>Free. Delivered by Substack, where the newsletter lives. Unsubscribe anytime.</small></section>'''
 
 
 
