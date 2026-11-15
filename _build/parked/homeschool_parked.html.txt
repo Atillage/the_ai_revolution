@@ -1,0 +1,34 @@
+<section class="eco-section"><div class="container">
+<div class="center-head"><span class="eyebrow">The options, in plain words</span><h2>Four ways kids are learning now</h2></div>
+<div class="path-grid">
+<article class="topic-card solid"><h3>Online school</h3><p>A full school delivered online, often free through a public virtual school in your state. It has teachers, a schedule and grades, just at home.</p></article>
+<article class="topic-card solid"><h3>Homeschooling</h3><p>Parents lead the learning, usually with a curriculum, a co-op or outside classes. Most homeschool families use some outside help.</p></article>
+<article class="topic-card solid"><h3>Deschooling</h3><p>A break after leaving traditional school, so a child can recover from school routines and rediscover what they're curious about before starting something new.</p></article>
+<article class="topic-card solid"><h3>Unschooling</h3><p>Child-led learning through interests, projects and everyday life, without a set curriculum. The parent guides and provides resources.</p></article>
+</div></div></section>
+
+<section class="eco-section" id="path-finder"><div class="container">
+<div class="center-head"><span class="eyebrow">Path finder</span><h2>Which learning path might fit your family?</h2><p style="margin:12px auto 0;max-width:640px">Four quick questions. You'll get a starting point to explore, not a final answer.</p></div>
+<form class="calc path-form" id="ed-path" novalidate>
+<fieldset><legend>How much time can an adult spend guiding learning on a school day?</legend>
+<label class="option"><input type="radio" name="time" value="0"> Very little, I work full time away from home</label>
+<label class="option"><input type="radio" name="time" value="1"> A couple of hours</label>
+<label class="option"><input type="radio" name="time" value="2"> Most of the day</label></fieldset>
+<fieldset><legend>How much structure does your child do best with?</legend>
+<label class="option"><input type="radio" name="structure" value="2"> A clear schedule and assignments</label>
+<label class="option"><input type="radio" name="structure" value="1"> Some structure, some freedom</label>
+<label class="option"><input type="radio" name="structure" value="0"> They learn best following their own interests</label></fieldset>
+<fieldset><legend>What's your budget for learning materials and classes?</legend>
+<label class="option"><input type="radio" name="budget" value="0"> As close to free as possible</label>
+<label class="option"><input type="radio" name="budget" value="1"> A modest amount each month</label>
+<label class="option"><input type="radio" name="budget" value="2"> We can invest in classes and curriculum</label></fieldset>
+<fieldset><legend>How is your child feeling about school right now?</legend>
+<label class="option"><input type="radio" name="feel" value="0"> Doing fine</label>
+<label class="option"><input type="radio" name="feel" value="1"> Bored or not challenged</label>
+<label class="option"><input type="radio" name="feel" value="2"> Stressed, burned out or struggling</label></fieldset>
+<button class="btn primary" type="submit">Show a starting point</button>
+<div id="ed-result" class="calc-result" aria-live="polite" tabindex="-1"></div>
+<small>Every family and state is different. Check your state's rules before making a change. No email required. Your answers stay on your device.</small>
+</form>
+</div></section>
+
