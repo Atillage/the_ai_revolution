@@ -1267,6 +1267,13 @@ REDIRECT = '''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta n
 for old, tag in [("home.html", "pick-home"), ("office.html", "pick-office")]:
     (ROOT / old).write_text(REDIRECT.replace("marketplace.html#home-office", "marketplace.html#" + tag))
 
+# ---------- Google Search Console verification (do not remove) ----------
+GSC = '<meta name="google-site-verification" content="yyV0nYsBCZVySPGIf4YILyVlVIKkFei4jze9mTq1eWg" />'
+for f in list(ROOT.glob("*.html")) + list(ROOT.glob("blog/*.html")):
+    s = f.read_text()
+    if "google-site-verification" not in s and '<meta charset="utf-8">' in s:
+        f.write_text(s.replace('<meta charset="utf-8">', '<meta charset="utf-8">' + GSC, 1))
+
 # ---------- Cache busting: tag local .js/.css links with a short hash of the file ----------
 import hashlib as _hl, re as _re2
 def _ver(path):
