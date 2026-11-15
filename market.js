@@ -1,6 +1,6 @@
 // Marketplace filters. Runs in the browser; nothing is stored or sent.
 (function () {
-  // Robots and AI gadgets shelf filter
+  // Two tabs: Robots and gadgets / Home and office
   const chips = document.querySelectorAll('.mk-chip');
   const shopCards = document.querySelectorAll('#mk-grid .mk-card');
   chips.forEach(c => c.addEventListener('click', () => {
@@ -10,18 +10,10 @@
   const area = document.getElementById('home-office');
   function showTab(f) {
     chips.forEach(x => { const on = x.dataset.f === f; x.classList.toggle('on', on); x.setAttribute('aria-pressed', on ? 'true' : 'false'); });
-    // Everything also lists every Home and office product; that tab keeps its click-a-card view
-    const all = f === 'all';
-    if (area) area.hidden = !(all || f === 'ho');
+    // The three Home and office cards appear only on their own tab
+    if (area) area.hidden = f !== 'ho';
     if (grid) grid.hidden = f === 'ho';
-    shopCards.forEach(card => { card.hidden = !(all || card.dataset.shelf === f); });
-    if (!panel) return;
-    if (intro) intro.hidden = all;
-    if (hoGrid) hoGrid.hidden = all;
-    picks.forEach(a => { a.classList.remove('on'); a.setAttribute('aria-pressed', 'false'); });
-    panel.querySelectorAll('.mk-card').forEach(card => { card.hidden = false; });
-    head.innerHTML = '<strong>Home and office</strong> picks';
-    panel.hidden = !all;
+    shopCards.forEach(card => { card.hidden = false; });
   }
 
   // Home and office: products show only after a card is clicked
@@ -29,8 +21,6 @@
   const panel = document.getElementById('ho-panel');
   const head = document.getElementById('ho-head');
   const picks = document.querySelectorAll('.ho-pick');
-  const intro = area && area.querySelector('.ho-intro');
-  const hoGrid = area && area.querySelector('.ho-grid');
   function pick(sub) {
     if (!panel) return;
     picks.forEach(a => { const on = a.dataset.pick === sub; a.classList.toggle('on', on); a.setAttribute('aria-pressed', on ? 'true' : 'false'); });
@@ -44,5 +34,4 @@
   const h = location.hash.replace('#', '');
   if (h === 'home-office') showTab('ho');
   else if (h.indexOf('pick-') === 0 && NAMES[h.slice(5)]) { showTab('ho'); pick(h.slice(5)); }
-  else showTab('all');
 })();
