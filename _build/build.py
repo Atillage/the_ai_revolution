@@ -7,7 +7,7 @@ SUBSCRIBE = "https://airevolutionupdate.substack.com/subscribe"
 
 PILLARS = [("work.html", "Work"), ("housing.html", "Housing"), ("finance.html", "Finance"),
            ("education.html", "Education"), ("healthcare.html", "Healthcare")]
-OTHER = [("jobs.html", "Jobs"), ("guides.html", "Guides"), ("marketplace.html", "Marketplace"), ("understanding-ai.html", "Understanding AI"), ("about.html", "About")]
+OTHER = [("jobs.html", "Jobs"), ("guides.html", "Guides"), ("marketplace.html", "Marketplace"), ("understanding-ai.html", "Understanding AI"), ("about.html", "Our Mission")]
 ACTIVE = {"index.html": "index.html", "work.html": "work.html", "office.html": "marketplace.html", "marketplace.html": "marketplace.html",
           "housing.html": "housing.html", "home.html": "marketplace.html", "finance.html": "finance.html",
           "education.html": "education.html", "healthcare.html": "healthcare.html",
@@ -34,7 +34,7 @@ def foot_links(pre=""):
     items = [("work.html", "Future of Work"), ("guides.html", "Guides"), ("housing.html", "Future of Housing"),
              ("understanding-ai.html", "Understanding AI"), ("finance.html", "Future of Finance"),
              ("index.html#score", "AI Readiness Score"), ("marketplace.html", "Marketplace"), ("education.html", "Future of Education"),
-             ("about.html", "About"), ("healthcare.html", "Future of Healthcare Work"),
+             ("about.html", "Our Mission"), ("healthcare.html", "Future of Healthcare Work"),
              ("jobs.html", "Find a job"), ("disclosure.html", "Disclosure &amp; privacy")]
     return '<div class="foot-links">' + "".join(f'<a href="{pre}{h}">{t}</a>' for h, t in items) + "</div>"
 
@@ -601,26 +601,60 @@ education_body = f'''<section class="pillar-hero"><div class="container pillar-h
 # ---------- Guides, About, Disclosure (generated) ----------
 
 
-about_body = '''<section class="page-hero"><div class="container"><span class="pill">ABOUT</span><h1>Helping working people <span class="gradient-text">stay ahead.</span></h1><p>The AI Revolution helps working people stay ahead of the AI economy by changing how they earn, learn, live and build wealth.</p></div></section>
+about_body = '''<section class="page-hero"><div class="container"><span class="pill">OUR MISSION</span><h1>Adapt. Build. <span class="gradient-text">Evolve.</span></h1><p>The future isn't something that happens to us. It's something we build.</p></div></section>
 <section class="section"><div class="container article-width">
-<h2>Why this site exists</h2>
-<p>AI is changing who gets hired, how rent is set, how money is managed, how kids learn and how health care gets delivered. Most of the coverage is written for investors and tech workers. This site is written for everyone else: people who work for a paycheck and want a plan.</p>
-<h2>Who's behind it</h2>
-<p>I'm Alaina. I've spent more than 30 years working in clinical health care, and I've watched technology change that work from the inside. I started The AI Revolution to share what I'm learning in simple terms, and to point people toward real help instead of hype.</p>
-<h2>The five pillars</h2>
-<ul>
-<li><a href="work.html"><strong>Work</strong></a>: keep earning when AI can do parts of your job.</li>
-<li><a href="housing.html"><strong>Housing</strong></a>: know your rights when AI helps decide rent and approvals, and build a safety net.</li>
-<li><a href="finance.html"><strong>Finance</strong></a>: build security that doesn't depend on one paycheck.</li>
-<li><a href="education.html"><strong>Education</strong></a>: find the learning path that fits your family.</li>
-<li><a href="healthcare.html"><strong>Healthcare Work</strong></a>: see which tasks are changing and how to stay ahead.</li>
-</ul>
+<h2>Why we exist</h2>
+<p>AI is not coming. It is here, and it is changing what it means to work, earn, live and belong.</p>
+<p>For the first time in history, machines can do much of the thinking work that people have been paid to do. Jobs that took years to learn can be automated in months. Decisions about our rent, our loans, our health and our hiring are already being made by software we never see.</p>
+<p>This is bigger than technology. It is about whether ordinary people still have a place, a purpose and a paycheck in the world that is coming. It is about the future of the human race.</p>
+<p>We believe that future is not decided yet. Adapt Build Evolve exists so that working people help decide it, instead of having it decided for them.</p>
+<h2>What we believe</h2>
+<ol>
+<li><strong>Humans come first.</strong> Technology should serve people, not replace their worth. A person is more than the tasks they do for a paycheck.</li>
+<li><strong>No one should be left behind.</strong> The AI economy will create winners. We want working families to be among them, not just the people who own the machines.</li>
+<li><strong>Surviving comes before thriving.</strong> First we protect our income, our homes and our families. Then we build something new.</li>
+<li><strong>Ownership is freedom.</strong> People who own skills, businesses, homes and savings are harder to knock down than people who only own a job.</li>
+<li><strong>The human things matter more now.</strong> Care, trust, hands-on skill, judgment and community are what machines cannot replace. We double down on them.</li>
+<li><strong>We are stronger together.</strong> No one gets through a revolution alone. We share what works, warn each other about what doesn't, and lift each other up.</li>
+<li><strong>Fear is not a plan.</strong> We look at the truth about AI clearly, then we act.</li>
+</ol>
 <h2>Adapt. Build. Evolve.</h2>
-<p><strong>Adapt</strong> by understanding what's changing. <strong>Build</strong> skills, savings and options. <strong>Evolve</strong> by finding what works for your own life.</p>
-<h2>How the site is paid for</h2>
-<p>Some links to outside services are paid links, and they're labeled "Paid link" where they appear. If you sign up through one, the site may earn a commission at no extra cost to you. I also sell a few guides of my own. I only list services I believe can help, and I include free options alongside paid ones. Read the full <a href="disclosure.html">disclosure</a>.</p>
-<a class="btn primary" href="index.html#score">Take the AI Readiness Score →</a>
-</div></section>'''
+<p>Three words, three stages of getting through what is coming.</p>
+<p><strong>Adapt: protect what you have.</strong> See the changes before they hit you. Know which parts of your job are at risk. Build a cash cushion, a backup plan and a list of people you can call. Know your rights when software decides your rent, your loan or your hiring.</p>
+<p><strong>Build: create what can't be taken.</strong> Grow skills that need a human. Start a second income. Learn a trade, start a business, or buy one. Put your money where it grows. Own something.</p>
+<p><strong>Evolve: become who the future needs.</strong> Keep learning for life. Teach your children to think, create and work alongside machines. Help shape the rules. Bring others with you, because a movement that grows is how people keep their power.</p>
+<h2>Who this is for</h2>
+<p>This movement is for the people who keep the world running and are rarely asked what they think about its future:</p>
+<ul>
+<li>Workers who wonder if their job will exist in five years</li>
+<li>People who just lost a job, or feel one coming</li>
+<li>Parents worried about what their children should learn</li>
+<li>People without a degree who are told the door is closing</li>
+<li>Anyone who has ever been treated like a number by a system</li>
+<li>Anyone ready to stop worrying and start building</li>
+</ul>
+<p>You don't need to be technical. You don't need money to start. You just need to decide you will not be left behind.</p>
+<h2>What we will do together</h2>
+<p>We focus on the five things every family needs to get through the AI era.</p>
+<ul>
+<li><a href="work.html"><strong>Work</strong></a>: Will I still have a way to earn? Spot the risk early, move toward work that needs a person, build a second paycheck.</li>
+<li><a href="housing.html"><strong>Housing</strong></a>: Will I keep a roof over my head? Know our rights, build a safety net, make our homes work for us.</li>
+<li><a href="finance.html"><strong>Money</strong></a>: Will my money last and grow? Build a cushion, avoid AI scams, invest for the long run, own assets.</li>
+<li><a href="education.html"><strong>Learning</strong></a>: Will my family have the skills that matter? Learn for life, prove skills over degrees, raise children ready for what's next.</li>
+<li><a href="healthcare.html"><strong>Health</strong></a>: Will we be cared for by people, not just systems? Know how AI is used in our care, speak up, protect the human side of health.</li>
+</ul>
+<p>And we do it as a community: sharing leads, swapping skills, meeting in person and online, and showing each other what is working.</p>
+<h2>Why I started this</h2>
+<p>I spent more than 30 years in hospitals, in radiology, CT and the cardiac cath lab. I watched technology change the work over and over. Machines got smarter, and every time, some people adapted and some people got left behind. The difference was rarely talent. It was whether someone saw it coming and had help.</p>
+<p>When AI arrived, I saw the same wave coming, only bigger and faster, and headed for almost every kind of job. So I did what I want everyone to be able to do. I adapted. I learned. I built a business, a newsletter and a website, on my own terms.</p>
+<p>I'm not a tech billionaire. I'm a working person who decided not to wait. Adapt Build Evolve is how I share the path, so you don't have to walk it alone.</p>
+<p><em>— Alaina Tillage, founder</em></p>
+<h2>Our promise, and your invitation</h2>
+<p>We promise to tell the truth about AI, even when it's uncomfortable. We promise to point you to real help, not hype. We promise to put people before profit, and to tell you plainly when we earn money from a recommendation. Read the full <a href="disclosure.html">disclosure</a>.</p>
+<p>The future isn't something that happens to us. It's something we build.</p>
+<p><strong>Join us. Adapt. Build. Evolve.</strong></p>
+</div></section>
+''' + join()
 
 disclosure_body = '''<section class="page-hero"><div class="container"><span class="pill">TRANSPARENCY &amp; PRIVACY</span><h1>Disclosure and <span class="gradient-text">privacy</span></h1><p>How this site earns money, what it collects and what it doesn't. Last updated November 2026.</p></div></section>
 <section class="section"><div class="container article-width">
@@ -1074,7 +1108,7 @@ pages_more = {
     "guides.html": ("Free AI Career Tools and Prompts, No Email Required | The AI Revolution", "Every free tool in one place: AI readiness score, job task check, money and housing calculators, skill finder, Skills Passport, AI scam quiz, 18 AI prompts and career maps.", guides_body, ""),
     "marketplace.html": ("AI Gadgets, Home Robots and Smart Home Without Wi-Fi | The AI Revolution", "Home robots, AI glasses, wearable AI recorders and smart lights that work without Wi-Fi, each rated from ready now to moonshot, with honest notes.", market_body, '<script src="market.js" defer></script>'),
     "understanding-ai.html": ("AI Explained: Questions, Words and a Beginner's Guide | The AI Revolution", "What is AI and what does it mean for you? A 5-part beginner's guide, answers to common AI questions, 20 AI words explained, and every article in one place.", understanding_body, '<script src="learn.js" defer></script>'),
-    "about.html": ("About | The AI Revolution", "Why The AI Revolution exists and who's behind it: helping working people stay ahead of the AI economy.", about_body, ""),
+    "about.html": ("Our Mission | The AI Revolution", "Adapt Build Evolve: our mission to help working people survive and thrive in the AI era, and why we started.", about_body, ""),
     "disclosure.html": ("Disclosure & Privacy | The AI Revolution", "How The AI Revolution earns money, labels paid links and handles your information.", disclosure_body, ""),
 }
 
