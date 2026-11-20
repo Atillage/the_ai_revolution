@@ -1303,10 +1303,14 @@ for old, tag in [("home.html", "pick-home"), ("office.html", "pick-office")]:
 
 # ---------- Google Search Console verification (do not remove) ----------
 GSC = '<meta name="google-site-verification" content="yyV0nYsBCZVySPGIf4YILyVlVIKkFei4jze9mTq1eWg" />'
+IMPACT = "<meta name='impact-site-verification' value='baffeffa-7432-4db2-8ed1-ecc56f3f89fa'>"  # impact.com affiliate network (do not remove)
 for f in list(ROOT.glob("*.html")) + list(ROOT.glob("blog/*.html")):
     s = f.read_text()
     if "google-site-verification" not in s and '<meta charset="utf-8">' in s:
-        f.write_text(s.replace('<meta charset="utf-8">', '<meta charset="utf-8">' + GSC, 1))
+        s = s.replace('<meta charset="utf-8">', '<meta charset="utf-8">' + GSC, 1)
+    if "impact-site-verification" not in s and '<meta charset="utf-8">' in s:
+        s = s.replace('<meta charset="utf-8">', '<meta charset="utf-8">' + IMPACT, 1)
+    f.write_text(s)
 
 # ---------- Cache busting: tag local .js/.css links with a short hash of the file ----------
 import hashlib as _hl, re as _re2
